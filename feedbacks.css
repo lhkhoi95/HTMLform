@@ -1,0 +1,170 @@
+/*common CSS rules*/
+            @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Snowburst+One&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+            body{
+                font-family: 'Open Sans', sans-serif;
+
+            }
+            #container{
+                display:grid;
+                grid-template-areas: 
+                    'header header header'
+                    'left main right'
+                    'footer footer footer';
+                grid-template-columns: 30% 40% 30%;
+            }
+            h1{
+                padding-left:10px;
+                font-family: 'Libre Baskerville', serif;
+                color:#9b3c2e;
+                padding-top:20px;
+                text-align: center;
+            }
+            #main{
+                grid-area: main;
+                font-family: "Source Sans Pro","Arial";
+                line-height: 1.6em;
+                background:#f3e6be;
+
+            }
+            #left{
+                grid-area: left;
+                background:#f5a883;
+            }
+            #right{
+                grid-area: right;
+                background:#b7c06f;
+            }
+            #header
+            {
+                background: #dde0b6;
+                grid-area: header;
+            } 
+            ul 
+            {
+                display:flex;
+                justify-content: space-around;
+                flex-basis: 80%;
+                flex-flow: wrap row;
+                background:#f3e6be;
+                border: 5px #9b3c2e solid;
+                margin-bottom: 0;
+                list-style:none;
+            }
+
+            nav a   
+            {
+                font-size:50px;
+                color:#9b3c2e;
+                text-decoration:none;
+
+                font-family: 'Snowburst One', cursive;
+            }
+            nav a:hover
+            {
+                background:#b7c06f;
+                box-shadow: 10px 5px;
+                transform: scale(1.1);
+
+            }
+
+            .active
+            {
+                background:#b7c06f;
+            }
+            #logo
+            {
+                text-align: center;
+            }
+            #foot
+            {
+                grid-area: footer;
+                background: #dde0b6;
+                font-size:15px;
+                text-align: center;
+            }
+            form{
+                line-height: 1.6em;
+                padding:20px;
+            }
+
+            .rows:nth-child(even){
+                background:#dde0b6;
+            }
+            table th{
+                text-align: left;
+            }
+            td{
+                width:100%;
+            }
+            legend{
+                font-weight: bold;
+            }
+            .Button{
+                background-color:forestgreen; /* Green */
+                border: none;
+                border-radius: 50px;    
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+            }
+            .Button:hover{
+                background-color:#9b3c2e;
+            }
+            .radio{
+                padding:0px 20px 0px 20px;
+            }
+            .checkbox{
+                padding:0px 0px 0px 20px;
+            }
+            label{
+                display:inline-block;
+            }
+            fieldset{
+                width:80%;
+                margin:20px 0 20px 0;
+                line-height: 1.6em;
+            }
+            #name{
+                height:30px;
+            }
+            #tryRecipe{
+                margin-bottom: 20px;
+            }
+
+            @media only screen and (max-width: 992px) 
+            {
+                #container
+                {
+                    display:grid;
+                    grid-template-areas: 
+                        'header header'
+                        'main right'
+                        'footer footer';
+                    grid-template-columns:80% 20%;
+                    grid-template-rows:auto;
+                }
+
+            }
+            @media only screen and (max-width: 768px) 
+            {
+                #container
+                {
+                    display:grid;
+                    grid-template-areas: 
+                        'header'
+                        'main'
+                        'footer';
+                    grid-template-columns:100%;
+                }
+                .radio{
+                    display:block;
+                    padding:20px;
+                }
+            }
